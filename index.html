@@ -65,6 +65,7 @@
             color: #d50000;
             text-shadow: 3px 3px 10px white;
             opacity: 0;
+            transition: opacity 2s ease-in-out;
         }
 
         /* Buttons */
@@ -136,7 +137,7 @@
 
     <!-- Love Text -->
     <div class="loveText" id="loveText">
-        I LOVE YOU ANAND❤️
+        I LOVE YOU ANAND ❤️
     </div>
 
     <!-- Buttons -->
@@ -146,13 +147,13 @@
     </div>
 
     <!-- Audio -->
-    <audio id="music">
+    <audio id="music" preload="auto">
         <source src="J.mp3" type="audio/mpeg">
     </audio>
 
     <script>
 
-        /* Rose auto move after girl comes */
+        /* Rose auto move after girl animation */
 
         setTimeout(() => {
 
@@ -172,11 +173,25 @@
         }, 7000);
 
 
-        /* Music */
+        /* YES Button Music (GitHub safe) */
 
         function sayYes() {
-            document.getElementById("music").play();
+
+            const music = document.getElementById("music");
+
+            music.play().then(() => {
+
+                console.log("Music playing ❤️");
+
+            }).catch(() => {
+
+                alert("Tap YES again ❤️ Music blocked by browser");
+
+            });
         }
+
+
+        /* NO Button */
 
         function sayNo() {
             alert("No option not allowed 😜 You are Mine Forever ❤️");
