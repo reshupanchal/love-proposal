@@ -2,203 +2,185 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>For My Husband ❤️</title>
+<meta charset="UTF-8">
 
-    <style>
-        /* Background */
-        body {
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(to top, #fff176, #ffd54f);
-            overflow: hidden;
-            font-family: Sans Serif;
-        }
+<!-- ✅ MOBILE VIEWPORT FIX -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        /* Message */
-        .message {
-            position: absolute;
-            top: 10%;
-            text-align: center;
-            color: #d50000;
-            font-size: 30px;
-            text-shadow: 2px 2px 5px white;
-        }
+<title>For My Husband ❤️</title>
 
-        /* Girl */
-        .girl {
-            position: absolute;
-            bottom: -250px;
-            left: 25%;
-            font-size: 130px;
-            animation: girlUp 4s forwards;
-        }
+<style>
 
-        /* Boy */
-        .boy {
-            position: absolute;
-            bottom: 40px;
-            right: 25%;
-            font-size: 130px;
-        }
+/* Background */
+body{
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+background:linear-gradient(to top,#fff176,#ffd54f);
+overflow:hidden;
+font-family:sans-serif;
+text-align:center;
+}
 
-        /* Rose */
-        .rose {
-            position: absolute;
-            bottom: 120px;
-            left: 32%;
-            font-size: 50px;
-            opacity: 0;
-        }
+/* Message */
+.message{
+position:absolute;
+top:8%;
+color:#d50000;
+font-size:22px;
+padding:0 15px;
+}
 
-        /* Love Text */
-        .loveText {
-            position: absolute;
-            top: 50%;
-            width: 100%;
-            text-align: center;
-            font-size: 60px;
-            font-weight: bold;
-            color: #d50000;
-            text-shadow: 3px 3px 10px white;
-            opacity: 0;
-            transition: opacity 2s ease-in-out;
-        }
+/* Girl */
+.girl{
+position:absolute;
+bottom:-200px;
+left:15%;
+font-size:80px;
+animation:girlUp 4s forwards;
+}
 
-        /* Buttons */
-        .buttons {
-            position: absolute;
-            bottom: 20px;
-        }
+/* Boy */
+.boy{
+position:absolute;
+bottom:20px;
+right:15%;
+font-size:80px;
+}
 
-        button {
-            padding: 12px 25px;
-            font-size: 18px;
-            border: none;
-            border-radius: 25px;
-            margin: 10px;
-            cursor: pointer;
-        }
+/* Rose */
+.rose{
+position:absolute;
+bottom:90px;
+left:28%;
+font-size:35px;
+opacity:0;
+}
 
-        .yes {
-            background: #ff1744;
-            color: white;
-        }
+/* Love Text */
+.loveText{
+position:absolute;
+top:48%;
+width:100%;
+font-size:38px;
+font-weight:bold;
+color:#d50000;
+opacity:0;
+transition:opacity 2s;
+}
 
-        .no {
-            background: #616161;
-            color: white;
-        }
+/* Buttons */
+.buttons{
+position:absolute;
+bottom:20px;
+width:100%;
+}
 
-        /* Animations */
+button{
+padding:10px 18px;
+font-size:16px;
+border:none;
+border-radius:25px;
+margin:8px;
+cursor:pointer;
+}
 
-        @keyframes girlUp {
-            0% {
-                bottom: -250px;
-            }
+.yes{background:#ff1744;color:white;}
+.no{background:#616161;color:white;}
 
-            100% {
-                bottom: 40px;
-            }
-        }
+/* Animations */
 
-        @keyframes giveRose {
-            0% {
-                left: 32%;
-                opacity: 1;
-            }
+@keyframes girlUp{
+0%{bottom:-200px;}
+100%{bottom:20px;}
+}
 
-            100% {
-                left: 62%;
-                opacity: 1;
-            }
-        }
-    </style>
+@keyframes giveRose{
+0%{left:28%;opacity:1;}
+100%{left:60%;opacity:1;}
+}
+
+/* 📱 Extra small screen fix */
+@media (max-width:480px){
+
+.message{font-size:20px;}
+
+.girl{font-size:70px;left:10%;}
+.boy{font-size:70px;right:10%;}
+.loveText{font-size:32px;}
+
+}
+
+</style>
 </head>
 
 <body>
 
-    <!-- Message -->
-    <div class="message">
-        💖 My Dear Husband 💖 <br><br>
-        You Are My Life, My Love, My Everything ❤️<br>
-        Will You Always Be Mine? 💍
-    </div>
+<!-- Message -->
+<div class="message">
+💖 My Dear Husband 💖 <br><br>
+You Are My Life, My Love, My Everything ❤️<br>
+Will You Always Be Mine? 💍
+</div>
 
-    <!-- Girl & Boy -->
-    <div class="girl">👧</div>
-    <div class="boy">👦</div>
+<!-- Girl & Boy -->
+<div class="girl">👧</div>
+<div class="boy">👦</div>
 
-    <!-- Rose -->
-    <div class="rose" id="rose">🌹</div>
+<!-- Rose -->
+<div class="rose" id="rose">🌹</div>
 
-    <!-- Love Text -->
-    <div class="loveText" id="loveText">
-        I LOVE YOU ANAND ❤️
-    </div>
+<!-- Love Text -->
+<div class="loveText" id="loveText">
+I LOVE YOU ANAND ❤️
+</div>
 
-    <!-- Buttons -->
-    <div class="buttons">
-        <button class="yes" onclick="sayYes()">YES ❤️</button>
-        <button class="no" onclick="sayNo()">NO 💔</button>
-    </div>
+<!-- Buttons -->
+<div class="buttons">
+<button class="yes" onclick="sayYes()">YES ❤️</button>
+<button class="no" onclick="sayNo()">NO 💔</button>
+</div>
 
-    <!-- Audio -->
-    <audio id="music" preload="auto">
-        <source src="J.mp3" type="audio/mpeg">
-    </audio>
+<!-- Audio -->
+<audio id="music" preload="auto">
+<source src="J.mp3" type="audio/mpeg">
+</audio>
 
-    <script>
+<script>
 
-        /* Rose auto move after girl animation */
+/* 🌹 Rose move */
 
-        setTimeout(() => {
+setTimeout(()=>{
+let rose=document.getElementById("rose");
+rose.style.opacity="1";
+rose.style.animation="giveRose 3s forwards";
+},4000);
 
-            let rose = document.getElementById("rose");
-            rose.style.opacity = "1";
-            rose.style.animation = "giveRose 3s forwards";
+/* ❤️ Love text */
 
-        }, 4000);
+setTimeout(()=>{
+document.getElementById("loveText").style.opacity="1";
+},7000);
 
+/* 🎵 Music */
 
-        /* Show Love Text */
+function sayYes(){
 
-        setTimeout(() => {
+let music=document.getElementById("music");
 
-            document.getElementById("loveText").style.opacity = "1";
+music.play().catch(()=>{
+alert("Tap YES again ❤️");
+});
 
-        }, 7000);
+}
 
+function sayNo(){
+alert("No option not allowed 😜");
+}
 
-        /* YES Button Music (GitHub safe) */
-
-        function sayYes() {
-
-            const music = document.getElementById("music");
-
-            music.play().then(() => {
-
-                console.log("Music playing ❤️");
-
-            }).catch(() => {
-
-                alert("Tap YES again ❤️ Music blocked by browser");
-
-            });
-        }
-
-
-        /* NO Button */
-
-        function sayNo() {
-            alert("No option not allowed 😜 You are Mine Forever ❤️");
-        }
-
-    </script>
+</script>
 
 </body>
-
 </html>
